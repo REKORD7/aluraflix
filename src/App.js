@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { v4 as uuid } from 'uuid';
+import GlobalStyles from "./componentes/GlobalStyles"
+import Header from './componentes/Header';
+import Footer from './componentes/Footer';
+import Banner from './componentes/Banner';
+import Team from './componentes/Team';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Header />
+      <Banner />
+      <Team />
+      <Footer />
+    </>
   );
 }
 
