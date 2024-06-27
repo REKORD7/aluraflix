@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import teams from './teams.json'
+import teams from '../../data/category.json'
 
 const StyledTitle = styled.h3`
     background-color: ${props => props.$backgroundColor};
     width: 432px;
     height: 70px;
-    color: white;
     border-radius: 15px;
     display: flex;
     align-items: center;

@@ -3,7 +3,7 @@ import Logo from '../Logo'
 
 const FooterStyled = styled.footer`
     background-color: #000000;
-    width: 1920px;
+    width: 100%;
     height: 125px;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,6 @@ const FooterStyled = styled.footer`
 
 const TextStyled = styled.p`
     font-size: 16px;
-	color: white;
 	margin: 0;
 `
 

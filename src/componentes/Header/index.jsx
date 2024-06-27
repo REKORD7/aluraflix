@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import Logo from '../Logo'
+import Button from '../Button'
 
 const HeaderStyled = styled.header`
-    width: 1920px;
+    background-color: #000000;
+    width: 100%;
     height: 125px;
     display: flex;
     justify-content: space-between;
@@ -15,20 +17,7 @@ const HeaderStyled = styled.header`
     div {
         display: flex;
         gap: 15px;
-        button{
-            background: none;
-            width: 180px;
-            height: 54px;
-            border-radius: 15px;
-            color: white;
-            border-color: white;
-        } 
-        :active{
-            color: #2271D1;
-            border-color: #2271D1;
-            box-shadow: inset 0px 0px 10px 3px rgba(34,113,209,0.75);
-        }
-
+        padding-right: 20px;
     }
 `
 
@@ -36,8 +25,8 @@ const Header = () => {
     return <HeaderStyled>
         <Logo/>
         <div>
-            <button className='buttonHome'>Home</button>
-            <button className='buttonNewVideo'>New Video</button>
+            <Button className='buttonHome'>Home</Button>
+            <Button className='buttonNewVideo'>New Video</Button>
         </div>
     </HeaderStyled>
 }

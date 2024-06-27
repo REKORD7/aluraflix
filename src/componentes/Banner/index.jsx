@@ -3,8 +3,7 @@ import data from './banner.json'
 import banner from '../../assets/banner.png'
 
 const StyledFigure = styled.figure`
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${banner});    
-    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${banner});
     flex-grow: 1;
     background-repeat: no-repeat;
     display: flex;
@@ -32,7 +31,6 @@ const StyledTitle = styled.h1`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
     background-color: #6BD1FF;
     font-size: 48px;
     height: 90px;
