@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Logo from '../Logo'
 import Button from '../Button'
+import { Link } from 'react-router-dom'
 
 const HeaderStyled = styled.header`
     background-color: #000000;
@@ -14,7 +15,7 @@ const HeaderStyled = styled.header`
         padding-left: 20px;
         height: 40px;
     }
-    div {
+    nav {
         display: flex;
         gap: 15px;
         padding-right: 20px;
@@ -24,10 +25,10 @@ const HeaderStyled = styled.header`
 const Header = () => {
     return <HeaderStyled>
         <Logo/>
-        <div>
-            <Button className='buttonHome'>Home</Button>
-            <Button className='buttonNewVideo'>New Video</Button>
-        </div>
+        <nav>
+            <Link to="/"><Button className='buttonHome'>Home</Button></Link>
+            <Link to="/newvideo"><Button className='buttonNewVideo'>New Video</Button></Link>
+        </nav>
     </HeaderStyled>
 }
 

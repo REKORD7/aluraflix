@@ -1,4 +1,5 @@
 import Banner from '../../componentes/Banner';
+import EditCard from '../../componentes/EditCard';
 import Team from '../../componentes/Team';
 
 function Inicio (){
@@ -6,6 +7,7 @@ function Inicio (){
         <>
         <Banner/>
         <Team/>
+        {/* <EditCard/> */}
         </>
     )
 }

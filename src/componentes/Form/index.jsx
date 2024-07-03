@@ -1,73 +1,64 @@
-import styled from 'styled-components'
-import OptionList from '../OptionList'
+import OptionList from './OptionList'
 import Button from '../Button'
+import Label from './Label'
+import Input from './Input'
+import TextBox from './TexBox'
+import styled from 'styled-components'
+import ImageVideo from '../../assets/video.png'
 
 const StyledForm = styled.form`
-    font-family: "Source Sans 3", sans-serif;
-    font-weight: 600; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:8px;
     width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    max-width: 1080px;
+`
+const ImageContainer = styled.div`
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+`
+const ButtonsContainer = styled.div`
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    margin-bottom: 35px;
-    .buttons{
-        display: flex;
-        gap: 20px;
-    }
+    width: 550px;
 `
 
-const Label = styled.label`
-    display: block;
-    margin: 25px 0px;
-`
 
-const Input = styled.input`
-    width: 95%;
-    height: 62px;
-    padding: 0 10px;
-    background-color: transparent;
-    border: 2px #505050 solid;
-    border-radius: 10px;
-    cursor: pointer;
-`
 
-const TextBox = styled.textarea`
-    width: 100%;
-    height: 220px;
-    background-color: transparent;
-    border: 2px #505050 solid;
-    border-radius: 10px;
-    cursor: pointer;
-    grid-row: 1;
-`
-
-function Form() {
-    return <StyledForm>
-        <div className='title'>
-            <Label htmlFor=''>Título</Label>
-            <Input type='text' placeholder='ingrese el título'></Input>
-        </div>
-        <div className='category'>
-            <Label>Categoria</Label>
-            <OptionList></OptionList>
-        </div>
-        <div className='image'>
-            <Label htmlFor=''>Imagen</Label>
-            <Input type='text' placeholder='el enlace es obligatorio'></Input>
+function Form(props) {
+    return <StyledForm className={props.className}>
+        <div>
+            <Label>Título</Label>
+            <Input type='text' placeholder='ingrese el título' borderColor={props.borderColor}></Input>
         </div>
         <div>
-            <Label htmlFor=''>Video</Label>
-            <Input type='text' placeholder='ingrese el enlace del video'></Input>
+            <Label>Categoria</Label>
+            <OptionList borderColor={props.borderColor} backGroundColor={props.backGroundColor}></OptionList>
         </div>
-        <div className='description'>
-            <Label htmlFor=''>Descripción</Label>
-            <TextBox placeholder='¿de qué se trata este vídeo'></TextBox>
+        <div>
+            <Label>Imagen</Label>
+            <Input type='text' placeholder='el enlace es obligatorio' borderColor={props.borderColor}></Input>
         </div>
-        <div/>
-        <div className='buttons'>
+        <div>
+            <Label>Video</Label>
+            <Input type='text' placeholder='ingrese el enlace del video' borderColor={props.borderColor}></Input>
+        </div>
+        <div >
+            <Label>Descripción</Label>
+            <TextBox placeholder='¿de qué se trata este vídeo?' borderColor={props.borderColor}></TextBox>
+        </div>
+        <ImageContainer>
+            <img src={ImageVideo} alt="imagen de video" />
+        </ImageContainer>
+        <ButtonsContainer>
             <Button className='buttonSave'>Guardar</Button>
             <Button className='buttonClear'>Limpiar</Button>
-        </div>
+        </ButtonsContainer>
     </StyledForm>
 }
 

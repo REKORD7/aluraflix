@@ -26,6 +26,7 @@ const SubTitle = styled.h3`
     display: flex;
     align-items:center;
     width: 100%;
+    max-width: 1080px;;
     height: 90px;
     font-weight: 500;
     font-size: 36px;
@@ -44,7 +45,7 @@ function NewVideo() {
                 <Title>Nuevo Video</Title>
                 <Parrafo>Complete el formulario para crear una nueva tarjeta de video</Parrafo>
                 <SubTitle>Crear Tarjeta</SubTitle>
-                <Form />
+                <Form borderColor="#505050" backGroundColor="#262626" styles={"NewVideo"}/>
             </NewVideoSection>
         </>
     )
