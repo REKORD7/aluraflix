@@ -2,7 +2,7 @@ import { createContext, useState, useContext, useEffect } from "react";
 
 const Context = createContext();
 
-export const useContext = () => useContext(Context);
+export const useCardContext = () => useContext(Context);
 
 export const CardsProvider = ({ children }) => {
     const [cards, setCards] = useState([]);
