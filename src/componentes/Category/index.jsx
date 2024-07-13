@@ -1,10 +1,7 @@
-import { useState, useEffect } from "react";
 import Card from "../Card";
 import { StyledCategory, StyledTitle, StyledContainer } from "../../elements/category"
-import { useCardContext } from "../../context/CardsContext";
 
-const Category = ({ backgroundColor, cards, name }) => {
-
+const Category = ({ backgroundColor, cards, name, onCardEdit }) => {
 
     return <>
         <StyledCategory className='category'>
@@ -16,6 +13,7 @@ const Category = ({ backgroundColor, cards, name }) => {
                             datos={card}
                             key={card.id}
                             primaryColor={backgroundColor}
+                            onEdit={() => onCardEdit(card)}
                         />
                     ))
                 }

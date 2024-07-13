@@ -1,20 +1,23 @@
 import { createContext, useState, useContext, useEffect } from "react";
+import { v4 as uuid } from 'uuid'
 
-const Context = createContext();
+const CardsContext = createContext();
 
-export const useCardContext = () => useContext(Context);
+export const useCardContext = () => useContext(CardsContext);
 
 export const CardsProvider = ({ children }) => {
     const [cards, setCards] = useState([]);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         fetch('https://my-json-server.typicode.com/rekord7/videos-api/videos')
-        .then(response => response.json())
-        .then(data => { setCards(data) })
+            .then(response => response.json())
+            .then(data => setCards(data))
+            .catch((error) => setError(error))
     }, []);
 
     const addCard = (card) => {
-        setCards((previusCards) => [...previusCards, { ...card, id: previusCards.length + 1 }]);
+        setCards((previusCards) => [...previusCards, { ...card, id: uuid() }]);
     };
 
     const deleteCard = (cardId) => {
@@ -26,9 +29,9 @@ export const CardsProvider = ({ children }) => {
     };
 
     return (
-        <Context.Provider value={{ cards, addCard, deleteCard, updateCard }}>
+        <CardsContext.Provider value={{ cards, error, addCard, deleteCard, updateCard }}>
             {children}
-        </Context.Provider>
+        </CardsContext.Provider>
     );
 };
 

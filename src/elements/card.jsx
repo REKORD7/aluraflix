@@ -56,12 +56,11 @@ const IconsContainer = styled.div`
     justify-content: center;
     background-color: transparent;
     width: 6.839rem;
-
+    cursor: pointer;
 `
 
 const  Icon = styled.div`
     font-size: 1.5rem;
-    cursor: pointer;
     background-color: transparent;
 `
 

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import Form from '../../componentes/Form'
 
+
+
 const NewVideoSection = styled.section`
     display: flex;
     flex-direction: column;
@@ -39,13 +41,14 @@ const SubTitle = styled.h3`
 
 
 function NewVideo() {
+
     return (
         <>
             <NewVideoSection>
                 <Title>Nuevo Video</Title>
                 <Parrafo>Complete el formulario para crear una nueva tarjeta de video</Parrafo>
                 <SubTitle>Crear Tarjeta</SubTitle>
-                <Form borderColor="#505050" backGroundColor="#262626" styles={"NewVideo"}/>
+                <Form borderColor="#505050" backGroundColor="#262626" />
             </NewVideoSection>
         </>
     )
