@@ -14,3 +14,7 @@ Aluraflix es una plataforma diseñada para gestionar vídeos, con funcionalidade
 ### Demo
 
 Para ver demo en Vercel acceder a (https://aluraflix-swart.vercel.app/).
+
+### Medalla por finalizar el desafio
+
+![Badge-AluraFlix](https://github.com/user-attachments/assets/0b60b6b7-c652-4fef-a80e-319c6de0e1f4)
