@@ -5,7 +5,7 @@ import EditCard from '../../componentes/EditCard';
 import Category from '../../componentes/Category';
 import { useCardContext } from "../../context/CardsContext";
 import { BannerProvider } from "../../context/BannerContext";
-
+import Error404 from "../Error404/Error.404"
 
 
 function Inicio() {
@@ -41,7 +41,7 @@ function Inicio() {
         <>
             <BannerProvider>
                 {banner && <Banner card={banner} />}
-                {error && <li>Ocurrio un error al cargar la pagina :c</li>}
+                {error && <Error404/>}
                 {
                     categories.map(category => (
                         <Category backgroundColor={category.color}
